@@ -17,12 +17,23 @@ jar {
 
 repositories {
     mavenCentral()
+
+    flatDir {
+      dirs "libs"
+    }
 }
 
-sourceCompatibility = 1.8
-targetCompatibility = 1.8
+sourceCompatibility = 1.7
+targetCompatibility = 1.7
 
 dependencies {
-    compile("org.springframework.boot:spring-boot-starter-web")
-    testCompile('org.springframework.boot:spring-boot-starter-test')
+  compile("org.springframework.boot:spring-boot-starter-web")
+
+  compile group: 'org.apache.httpcomponents', name: 'httpclient', version: '4.5.3'
+
+  compile 'com.fasterxml.jackson.core:jackson-core:2.9.+'
+  compile 'com.fasterxml.jackson.core:jackson-annotations:2.9.+'
+  compile 'com.fasterxml.jackson.core:jackson-databind:2.9.+'
+
+  compile fileTree(dir: 'libs', include: ['*.jar'])
 }
