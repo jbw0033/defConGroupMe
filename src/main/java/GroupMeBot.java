@@ -42,7 +42,7 @@ public class GroupMeBot {
   private static final String GROUPME_BASE = "https://api.groupme.com/v3/bots/post";
   private static String BOT_ID = "767b696698d4409da9d87107b7";
 
-  private static String GROUPME_TOKEN = "6ag0wIyHz0RMfGrJEK4AD7P9319rlLPt3rTF5RMW";
+  private static String GROUPME_TOKEN = "";
   private static String GROUP_ID = "32289600";
 
   @RequestMapping(value="/groupmebot", method=RequestMethod.POST, consumes="application/json")
